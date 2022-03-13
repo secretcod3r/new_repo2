@@ -15,6 +15,9 @@ test: TestRunner.o StudentTest1.o StudentTest2.o StudentTest3.o $(OBJECTS) $(OBJ
 main: Main.o $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o main
 
+my_main: my_main.o $(OBJECTS)
+	$(CXX) $(CXXFLAGS) $^ -o my_main
+
 %.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
